@@ -23,17 +23,6 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/analytics/analytics.component.html":
-/*!******************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/analytics/analytics.component.html ***!
-  \******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div>\n  <p>Event Submitted.</p>\n  <p>Events sent: </p>\n  <a href=\"https://us-east-1.console.aws.amazon.com/pinpoint/home?region=us-east-1#/apps/7a3bfb24effb4b2aa1400bc9e6273806/analytics/overview\"target=\"_blank\">View Events on the Amazon Pinpoint Console</a>\n</div>\n"
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/index.js!./src/app/app.component.html":
 /*!**************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/app.component.html ***!
@@ -118,56 +107,7 @@ module.exports = "<router-outlet></router-outlet>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper fadeInDown\">\n  <div id=\"formContent\">\n    <!-- Tabs Titles -->\n    <h2 *ngIf=\"(register == true)\">Registeration Form</h2>\n    <h2 *ngIf=\"(register == false)\">Login Form</h2>\n\n    <!-- Login & Register Form -->\n    <form #userForm=\"ngForm\">\n\n      <input type=\"text\" required [pattern]=\"emailRegex\" #email=\"ngModel\" name=\"email\" placeholder=\"Email\"\n      [(ngModel)]=\"User.email\" >\n      <div *ngIf=\"userForm.touched && email.errors\">\n          <label *ngIf=\"email.errors.required\" class=\"validation-message\">This field is required.</label>\n          <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n      </div>\n\n      <!-- Add Name Field if it is in registeration form -->\n      <div *ngIf=\"(register == true)\">\n        <input type=\"text\" required #username=\"ngModel\" name=\"name\" placeholder=\"Name\"\n        [(ngModel)]=\"User.name\">\n\n        <div *ngIf=\"userForm.touched  && username.errors\">\n            <label *ngIf=\"username.errors.required\" class=\"validation-message\">Name is required.</label>\n        </div>\n      </div>\n\n      <input type=\"password\" required #password=\"ngModel\" name=\"password\" placeholder=\"password\"\n      [(ngModel)]=\"User.password\">\n\n      <div *ngIf=\"userForm.touched  && password.errors\">\n          <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\n      </div>\n\n\n      <br><br>\n      <input type=\"radio\" required #role=\"ngModel\" id=\"teacher\" name=\"role\" [(ngModel)]=\"User.role\" value=\"teacher\">\n       <label for=\"teacher\"> Teacher</label>\n      <br>\n      <input type=\"radio\" required #role=\"ngModel\" id=\"student\" name=\"role\" [(ngModel)]=\"User.role\" value=\"student\">\n      <label for=\"student\"> Student</label>\n      <br>\n\n      <div *ngIf=\"userForm.touched && role.errors\">\n          <label *ngIf=\"role.errors.required\" class=\"validation-message\">The Role is required.</label>\n      </div>\n\n\n      <input type=\"submit\" class=\"fadeIn second\" value=\"Reigster\" *ngIf=\"(register == true)\" (click)=\"signUp(userForm)\">\n      <input type=\"submit\" class=\"fadeIn second\" value=\"Log In\" *ngIf=\"(register == false)\" (click)=\"signIn(userForm)\">\n      <hr>\n    </form>\n    <div class=\"alert alert-warning\" role=\"alert\" [textContent]=\"msg\" *ngIf=\"(msg)\">\n\n    </div>\n    <div id=\"formFooter\">\n      <p class=\"underlineHover\" (click)=\"register=true\" *ngIf=\"(register == false)\">Don't have Account ? Register Now</p>\n      <p class=\"underlineHover\" (click)=\"register=false\" *ngIf=\"(register == true)\">Already have Account ? Login Now</p>\n    </div>\n\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/analytics/analytics.component.css":
-/*!***************************************************!*\
-  !*** ./src/app/analytics/analytics.component.css ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FuYWx5dGljcy9hbmFseXRpY3MuY29tcG9uZW50LmNzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/analytics/analytics.component.ts":
-/*!**************************************************!*\
-  !*** ./src/app/analytics/analytics.component.ts ***!
-  \**************************************************/
-/*! exports provided: AnalyticsComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AnalyticsComponent", function() { return AnalyticsComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-// import Auth from '@aws-amplify/auth';
-// import Analytics from '@aws-amplify/analytics';
-// import awsconfig from '../../aws-exports';
-var AnalyticsComponent = /** @class */ (function () {
-    //   url = 'https://us-east-1.console.aws.amazon.com/pinpoint/home?region=us-east-1#/apps/'+awsconfig.aws_mobile_analytics_app_id+'/analytics/events';
-    function AnalyticsComponent() {
-    }
-    AnalyticsComponent.prototype.ngOnInit = function () {
-    };
-    AnalyticsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-analytics',
-            template: __webpack_require__(/*! raw-loader!./analytics.component.html */ "./node_modules/raw-loader/index.js!./src/app/analytics/analytics.component.html"),
-            styles: [__webpack_require__(/*! ./analytics.component.css */ "./src/app/analytics/analytics.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], AnalyticsComponent);
-    return AnalyticsComponent;
-}());
-
-
+module.exports = "<div class=\"wrapper fadeInDown\">\n  <div id=\"formContent\">\n    <!-- Tabs Titles -->\n\n    <h2 *ngIf=\"(register == true)\">Registeration Form</h2>\n    <h2 *ngIf=\"(register == false)\">Login Form</h2>\n\n    <!-- Login & Register Form -->\n    <form #userForm=\"ngForm\">\n\n      <input type=\"text\" required [pattern]=\"emailRegex\" #email=\"ngModel\" name=\"email\" placeholder=\"Email\"\n      [(ngModel)]=\"User.email\" >\n      <div *ngIf=\"userForm.touched && email.errors\">\n          <label *ngIf=\"email.errors.required\" class=\"validation-message\">This field is required.</label>\n          <label *ngIf=\"email.errors.pattern\" class=\"validation-message\">Invalid email address.</label>\n      </div>\n\n      <!-- Add Name Field if it is in registeration form -->\n      <div *ngIf=\"(register == true)\">\n        <input type=\"text\" required #username=\"ngModel\" name=\"name\" placeholder=\"Name\"\n        [(ngModel)]=\"User.name\">\n        \n        <div *ngIf=\"userForm.touched  && username.errors\">\n            <label *ngIf=\"username.errors.required\" class=\"validation-message\">Name is required.</label>\n        </div>\n      </div>  \n\n      <input type=\"password\" required #password=\"ngModel\" name=\"password\" placeholder=\"password\"\n      [(ngModel)]=\"User.password\">\n\n      <div *ngIf=\"userForm.touched  && password.errors\">\n          <label *ngIf=\"password.errors.required\" class=\"validation-message\">Password is required.</label>\n      </div>\n\n\n      <br><br>\n      <input type=\"radio\" required #role=\"ngModel\" id=\"teacher\" name=\"role\" [(ngModel)]=\"User.role\" value=\"teacher\">\n       <label for=\"teacher\"> Teacher</label>\n      <br>\n      <input type=\"radio\" required #role=\"ngModel\" id=\"student\" name=\"role\" [(ngModel)]=\"User.role\" value=\"student\">\n      <label for=\"student\"> Student</label>\n      <br>\n\n      <div *ngIf=\"userForm.touched && role.errors\">\n          <label *ngIf=\"role.errors.required\" class=\"validation-message\">The Role is required.</label>\n      </div>\n\n\n      <input type=\"submit\" class=\"fadeIn second\" value=\"Reigster\" *ngIf=\"(register == true)\" (click)=\"signUp(userForm)\">\n      <input type=\"submit\" class=\"fadeIn second\" value=\"Log In\" *ngIf=\"(register == false)\" (click)=\"signIn(userForm)\">\n      <hr>\n    </form>\n    <div class=\"alert alert-warning\" role=\"alert\" [textContent]=\"msg\" *ngIf=\"(msg)\">\n         \n    </div>\n    <!-- <div id=\"formFooter\">\n      <p class=\"underlineHover\" (click)=\"register=true\" *ngIf=\"(register == false)\">Don't have Account ? Register Now</p>\n      <p class=\"underlineHover\" (click)=\"register=false\" *ngIf=\"(register == true)\">Already have Account ? Login Now</p>\n    </div> -->\n\n  </div>\n</div>"
 
 /***/ }),
 
@@ -310,8 +250,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./quiz/quiz.component */ "./src/app/quiz/quiz.component.ts");
 /* harmony import */ var _question_question_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./question/question.component */ "./src/app/question/question.component.ts");
 /* harmony import */ var _student_student_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./student/student.component */ "./src/app/student/student.component.ts");
-/* harmony import */ var _analytics_analytics_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./analytics/analytics.component */ "./src/app/analytics/analytics.component.ts");
-
 
 
 
@@ -342,8 +280,7 @@ var AppModule = /** @class */ (function () {
                 _teacher_teacher_profile_teacher_profile_component__WEBPACK_IMPORTED_MODULE_13__["TeacherProfileComponent"],
                 _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_14__["QuizComponent"],
                 _question_question_component__WEBPACK_IMPORTED_MODULE_15__["QuestionComponent"],
-                _student_student_component__WEBPACK_IMPORTED_MODULE_16__["StudentComponent"],
-                _analytics_analytics_component__WEBPACK_IMPORTED_MODULE_17__["AnalyticsComponent"]
+                _student_student_component__WEBPACK_IMPORTED_MODULE_16__["StudentComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -1626,7 +1563,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/fouad/Desktop/cloud/Quiz-APP-Client-Side/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Mohammed\Desktop\Quiz-APP-Client-Side\src\main.ts */"./src/main.ts");
 
 
 /***/ })
